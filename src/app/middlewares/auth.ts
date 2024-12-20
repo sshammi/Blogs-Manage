@@ -21,7 +21,7 @@ const auth = () => {
       if (decoded.role !== 'user') {
         throw new AppError(
           StatusCodes.FORBIDDEN,
-          'Access denied! Admins only.'
+          'Access denied! User only.'
         );
       }
     req.user = decoded as JwtPayload;
