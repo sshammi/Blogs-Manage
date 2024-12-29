@@ -29,9 +29,9 @@ const loginUser = async (payload: TLoginUser) => {
     id: user._id,
   };
 
-  const Token = jwt.sign(jwtPayload, config.jwt_access_secret as string, { expiresIn: '10d' });
+  const token = jwt.sign(jwtPayload, config.jwt_access_secret as string, { expiresIn: '10d' });
 
-  return { Token };
+  return { token };
 };
 
 export const AuthServices = {

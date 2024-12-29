@@ -45,6 +45,6 @@ const userSchema = new Schema<TUser>(
     );
   
     next();
-  });
+});
 
 export const User = model<TUser>('User', userSchema);
